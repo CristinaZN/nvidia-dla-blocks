@@ -7010,7 +7010,7 @@ module NV_NVDLA_slcg( // @[:@5452.2]
   input   io_nvdla_clock_nvdla_core_clk, // @[:@5455.4]
   output  io_nvdla_core_gated_clk // @[:@5455.4]
 );
-  assign io_nvdla_core_gated_clk = io_nvdla_clock_nvdla_core_clk; // @[slcg.scala 23:31:@5457.4]
+  assign io_nvdla_core_gated_clk = io_nvdla_clock_nvdla_core_clk; // @[slcg.scala 23:33:@5457.4]
 endmodule
 module NV_soDLA_cacc( // @[:@5480.2]
   input          clock, // @[:@5481.4]
