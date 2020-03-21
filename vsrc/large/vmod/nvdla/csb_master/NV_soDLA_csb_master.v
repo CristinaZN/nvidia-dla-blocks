@@ -3836,7 +3836,7 @@ module NV_NVDLA_CSB_MASTER_for_client_14( // @[:@2277.2]
     end
   end
 endmodule
-module NV_NVDLA_csb_master( // @[:@2319.2]
+module NV_soDLA_csb_master( // @[:@2319.2]
   input         clock, // @[:@2320.4]
   input         reset, // @[:@2321.4]
   input         io_nvdla_core_clk, // @[:@2322.4]
