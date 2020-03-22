@@ -233,7 +233,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo_gray_cntr_strict( // @[:@264.2]
   assign _T_31 = {_T_21,_T_25,_T_29}; // @[Cat.scala 30:58:@288.4]
   assign io_gray_next = _T_15 ? io_gray : _T_31; // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 406:21:@290.4]
 endmodule
-module p_SSYNC3DO_C_PPP( // @[:@292.2]
+module p_SSYNC3DO_C_PPP_so( // @[:@292.2]
   input   io_clk, // @[:@295.4]
   input   io_d, // @[:@295.4]
   output  io_q, // @[:@295.4]
@@ -304,7 +304,7 @@ module p_SSYNC3DO_C_PPP( // @[:@292.2]
     end
   end
 endmodule
-module p_STRICTSYNC3DOTM_C_PPP( // @[:@306.2]
+module p_STRICTSYNC3DOTM_C_PPP_so( // @[:@306.2]
   input   io_SRC_D_NEXT, // @[:@309.4]
   input   io_SRC_CLK, // @[:@309.4]
   input   io_SRC_CLRN, // @[:@309.4]
@@ -320,7 +320,7 @@ module p_STRICTSYNC3DOTM_C_PPP( // @[:@306.2]
   wire  _T_23; // @[p_STRICTSYNC3DOTM_C_PPP.scala 25:45:@311.4]
   reg  _T_26; // @[p_STRICTSYNC3DOTM_C_PPP.scala 25:67:@312.4]
   reg [31:0] _RAND_0;
-  p_SSYNC3DO_C_PPP sync3d ( // @[p_STRICTSYNC3DOTM_C_PPP.scala 27:22:@315.4]
+  p_SSYNC3DO_C_PPP_so sync3d ( // @[p_STRICTSYNC3DOTM_C_PPP.scala 27:22:@315.4]
     .io_clk(sync3d_io_clk),
     .io_d(sync3d_io_d),
     .io_q(sync3d_io_q),
@@ -664,7 +664,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_gray(wr_pushing_gray_io_gray),
     .io_gray_next(wr_pushing_gray_io_gray_next)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_wr_pushing_sync0 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 245:43:@752.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_wr_pushing_sync0 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 245:43:@752.4]
     .io_SRC_D_NEXT(nv_AFIFO_wr_pushing_sync0_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_wr_pushing_sync0_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_wr_pushing_sync0_io_SRC_CLRN),
@@ -673,7 +673,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_SRC_D(nv_AFIFO_wr_pushing_sync0_io_SRC_D),
     .io_DST_Q(nv_AFIFO_wr_pushing_sync0_io_DST_Q)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_wr_pushing_sync1 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 256:43:@763.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_wr_pushing_sync1 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 256:43:@763.4]
     .io_SRC_D_NEXT(nv_AFIFO_wr_pushing_sync1_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_wr_pushing_sync1_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_wr_pushing_sync1_io_SRC_CLRN),
@@ -682,7 +682,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_SRC_D(nv_AFIFO_wr_pushing_sync1_io_SRC_D),
     .io_DST_Q(nv_AFIFO_wr_pushing_sync1_io_DST_Q)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_wr_pushing_sync2 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 267:43:@774.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_wr_pushing_sync2 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 267:43:@774.4]
     .io_SRC_D_NEXT(nv_AFIFO_wr_pushing_sync2_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_wr_pushing_sync2_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_wr_pushing_sync2_io_SRC_CLRN),
@@ -712,7 +712,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_gray(rd_popping_gray_io_gray),
     .io_gray_next(rd_popping_gray_io_gray_next)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_rd_popping_sync0 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 310:43:@817.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_rd_popping_sync0 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 310:43:@817.4]
     .io_SRC_D_NEXT(nv_AFIFO_rd_popping_sync0_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_rd_popping_sync0_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_rd_popping_sync0_io_SRC_CLRN),
@@ -721,7 +721,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_SRC_D(nv_AFIFO_rd_popping_sync0_io_SRC_D),
     .io_DST_Q(nv_AFIFO_rd_popping_sync0_io_DST_Q)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_rd_popping_sync1 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 321:43:@828.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_rd_popping_sync1 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 321:43:@828.4]
     .io_SRC_D_NEXT(nv_AFIFO_rd_popping_sync1_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_rd_popping_sync1_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_rd_popping_sync1_io_SRC_CLRN),
@@ -730,7 +730,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_SRC_D(nv_AFIFO_rd_popping_sync1_io_SRC_D),
     .io_DST_Q(nv_AFIFO_rd_popping_sync1_io_DST_Q)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_rd_popping_sync2 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 332:43:@839.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_rd_popping_sync2 ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 332:43:@839.4]
     .io_SRC_D_NEXT(nv_AFIFO_rd_popping_sync2_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_rd_popping_sync2_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_rd_popping_sync2_io_SRC_CLRN),
@@ -1386,7 +1386,7 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
     .io_gray(wr_pushing_gray_io_gray),
     .io_gray_next(wr_pushing_gray_io_gray_next)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_wr_pushing_sync0 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 244:43:@1550.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_wr_pushing_sync0 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 244:43:@1550.4]
     .io_SRC_D_NEXT(nv_AFIFO_wr_pushing_sync0_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_wr_pushing_sync0_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_wr_pushing_sync0_io_SRC_CLRN),
@@ -1395,7 +1395,7 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
     .io_SRC_D(nv_AFIFO_wr_pushing_sync0_io_SRC_D),
     .io_DST_Q(nv_AFIFO_wr_pushing_sync0_io_DST_Q)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_wr_pushing_sync1 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 255:43:@1561.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_wr_pushing_sync1 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 255:43:@1561.4]
     .io_SRC_D_NEXT(nv_AFIFO_wr_pushing_sync1_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_wr_pushing_sync1_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_wr_pushing_sync1_io_SRC_CLRN),
@@ -1425,7 +1425,7 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
     .io_gray(rd_popping_gray_io_gray),
     .io_gray_next(rd_popping_gray_io_gray_next)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_rd_popping_sync0 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 298:43:@1602.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_rd_popping_sync0 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 298:43:@1602.4]
     .io_SRC_D_NEXT(nv_AFIFO_rd_popping_sync0_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_rd_popping_sync0_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_rd_popping_sync0_io_SRC_CLRN),
@@ -1434,7 +1434,7 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
     .io_SRC_D(nv_AFIFO_rd_popping_sync0_io_SRC_D),
     .io_DST_Q(nv_AFIFO_rd_popping_sync0_io_DST_Q)
   );
-  p_STRICTSYNC3DOTM_C_PPP nv_AFIFO_rd_popping_sync1 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 309:43:@1613.4]
+  p_STRICTSYNC3DOTM_C_PPP_so nv_AFIFO_rd_popping_sync1 ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 309:43:@1613.4]
     .io_SRC_D_NEXT(nv_AFIFO_rd_popping_sync1_io_SRC_D_NEXT),
     .io_SRC_CLK(nv_AFIFO_rd_popping_sync1_io_SRC_CLK),
     .io_SRC_CLRN(nv_AFIFO_rd_popping_sync1_io_SRC_CLRN),
