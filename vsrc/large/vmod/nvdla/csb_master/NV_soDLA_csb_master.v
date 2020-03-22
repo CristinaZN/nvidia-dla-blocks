@@ -1,4 +1,4 @@
-module CKLNQD12( // @[:@32.2]
+module CKLNQD12_so( // @[:@32.2]
   input   io_CP, // @[:@35.4]
   input   io_TE, // @[:@35.4]
   input   io_E, // @[:@35.4]
@@ -49,7 +49,7 @@ module CKLNQD12( // @[:@32.2]
     _T_20 <= io_TE | io_E;
   end
 endmodule
-module NV_CLK_gate_power( // @[:@50.2]
+module NV_CLK_gate_power_so( // @[:@50.2]
   input   io_clk, // @[:@53.4]
   input   io_clk_en, // @[:@53.4]
   output  io_clk_gated // @[:@53.4]
@@ -58,7 +58,7 @@ module NV_CLK_gate_power( // @[:@50.2]
   wire  p_clkgate_io_TE; // @[NV_CLK_gate_power.scala 18:29:@55.4]
   wire  p_clkgate_io_E; // @[NV_CLK_gate_power.scala 18:29:@55.4]
   wire  p_clkgate_io_Q; // @[NV_CLK_gate_power.scala 18:29:@55.4]
-  CKLNQD12 p_clkgate ( // @[NV_CLK_gate_power.scala 18:29:@55.4]
+  CKLNQD12_so p_clkgate ( // @[NV_CLK_gate_power.scala 18:29:@55.4]
     .io_CP(p_clkgate_io_CP),
     .io_TE(p_clkgate_io_TE),
     .io_E(p_clkgate_io_E),
@@ -624,22 +624,22 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
   wire  _T_162; // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 383:101:@902.4]
   wire  _T_166; // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 383:115:@905.4]
   wire  _T_167; // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 383:162:@906.4]
-  NV_CLK_gate_power wr_clk_wr_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 39:37:@636.4]
+  NV_CLK_gate_power_so wr_clk_wr_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 39:37:@636.4]
     .io_clk(wr_clk_wr_dft_mgate_io_clk),
     .io_clk_en(wr_clk_wr_dft_mgate_io_clk_en),
     .io_clk_gated(wr_clk_wr_dft_mgate_io_clk_gated)
   );
-  NV_CLK_gate_power rd_clk_rd_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 54:37:@644.4]
+  NV_CLK_gate_power_so rd_clk_rd_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 54:37:@644.4]
     .io_clk(rd_clk_rd_dft_mgate_io_clk),
     .io_clk_en(rd_clk_rd_dft_mgate_io_clk_en),
     .io_clk_gated(rd_clk_rd_dft_mgate_io_clk_gated)
   );
-  NV_CLK_gate_power wr_clk_wr_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 77:33:@650.4]
+  NV_CLK_gate_power_so wr_clk_wr_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 77:33:@650.4]
     .io_clk(wr_clk_wr_mgate_io_clk),
     .io_clk_en(wr_clk_wr_mgate_io_clk_en),
     .io_clk_gated(wr_clk_wr_mgate_io_clk_gated)
   );
-  NV_CLK_gate_power rd_clk_rd_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 83:33:@656.4]
+  NV_CLK_gate_power_so rd_clk_rd_mgate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 83:33:@656.4]
     .io_clk(rd_clk_rd_mgate_io_clk),
     .io_clk_en(rd_clk_rd_mgate_io_clk_en),
     .io_clk_gated(rd_clk_rd_mgate_io_clk_gated)
@@ -654,7 +654,7 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_ra(ram_io_ra),
     .io_dout(ram_io_dout)
   );
-  NV_CLK_gate_power wr_clk_wr_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 232:43:@741.4]
+  NV_CLK_gate_power_so wr_clk_wr_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 232:43:@741.4]
     .io_clk(wr_clk_wr_mgated_snd_gate_io_clk),
     .io_clk_en(wr_clk_wr_mgated_snd_gate_io_clk_en),
     .io_clk_gated(wr_clk_wr_mgated_snd_gate_io_clk_gated)
@@ -697,12 +697,12 @@ module NV_NVDLA_CSB_MASTER_falcon2csb_fifo( // @[:@628.2]
     .io_inc(rd_pushing_gray_io_inc),
     .io_gray(rd_pushing_gray_io_gray)
   );
-  NV_CLK_gate_power rd_clk_rd_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 290:43:@798.4]
+  NV_CLK_gate_power_so rd_clk_rd_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 290:43:@798.4]
     .io_clk(rd_clk_rd_mgated_snd_gate_io_clk),
     .io_clk_en(rd_clk_rd_mgated_snd_gate_io_clk_en),
     .io_clk_gated(rd_clk_rd_mgated_snd_gate_io_clk_gated)
   );
-  NV_CLK_gate_power wr_clk_rcv_gate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 295:33:@804.4]
+  NV_CLK_gate_power_so wr_clk_rcv_gate ( // @[NV_NVDLA_CSB_MASTER_falcon2csb_fifo.scala 295:33:@804.4]
     .io_clk(wr_clk_rcv_gate_io_clk),
     .io_clk_en(wr_clk_rcv_gate_io_clk_en),
     .io_clk_gated(wr_clk_rcv_gate_io_clk_gated)
@@ -1346,22 +1346,22 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
   wire  _T_152; // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 360:101:@1674.4]
   wire  _T_156; // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 360:115:@1677.4]
   wire  _T_157; // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 360:162:@1678.4]
-  NV_CLK_gate_power wr_clk_wr_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 38:37:@1434.4]
+  NV_CLK_gate_power_so wr_clk_wr_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 38:37:@1434.4]
     .io_clk(wr_clk_wr_dft_mgate_io_clk),
     .io_clk_en(wr_clk_wr_dft_mgate_io_clk_en),
     .io_clk_gated(wr_clk_wr_dft_mgate_io_clk_gated)
   );
-  NV_CLK_gate_power rd_clk_rd_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 53:37:@1442.4]
+  NV_CLK_gate_power_so rd_clk_rd_dft_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 53:37:@1442.4]
     .io_clk(rd_clk_rd_dft_mgate_io_clk),
     .io_clk_en(rd_clk_rd_dft_mgate_io_clk_en),
     .io_clk_gated(rd_clk_rd_dft_mgate_io_clk_gated)
   );
-  NV_CLK_gate_power wr_clk_wr_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 76:33:@1448.4]
+  NV_CLK_gate_power_so wr_clk_wr_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 76:33:@1448.4]
     .io_clk(wr_clk_wr_mgate_io_clk),
     .io_clk_en(wr_clk_wr_mgate_io_clk_en),
     .io_clk_gated(wr_clk_wr_mgate_io_clk_gated)
   );
-  NV_CLK_gate_power rd_clk_rd_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 82:33:@1454.4]
+  NV_CLK_gate_power_so rd_clk_rd_mgate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 82:33:@1454.4]
     .io_clk(rd_clk_rd_mgate_io_clk),
     .io_clk_en(rd_clk_rd_mgate_io_clk_en),
     .io_clk_gated(rd_clk_rd_mgate_io_clk_gated)
@@ -1376,7 +1376,7 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
     .io_ra(ram_io_ra),
     .io_dout(ram_io_dout)
   );
-  NV_CLK_gate_power wr_clk_wr_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 231:43:@1539.4]
+  NV_CLK_gate_power_so wr_clk_wr_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 231:43:@1539.4]
     .io_clk(wr_clk_wr_mgated_snd_gate_io_clk),
     .io_clk_en(wr_clk_wr_mgated_snd_gate_io_clk_en),
     .io_clk_gated(wr_clk_wr_mgated_snd_gate_io_clk_gated)
@@ -1410,12 +1410,12 @@ module NV_NVDLA_CSB_MASTER_csb2falcon_fifo( // @[:@1426.2]
     .io_inc(rd_pushing_gray_io_inc),
     .io_gray(rd_pushing_gray_io_gray)
   );
-  NV_CLK_gate_power rd_clk_rd_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 278:43:@1583.4]
+  NV_CLK_gate_power_so rd_clk_rd_mgated_snd_gate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 278:43:@1583.4]
     .io_clk(rd_clk_rd_mgated_snd_gate_io_clk),
     .io_clk_en(rd_clk_rd_mgated_snd_gate_io_clk_en),
     .io_clk_gated(rd_clk_rd_mgated_snd_gate_io_clk_gated)
   );
-  NV_CLK_gate_power wr_clk_rcv_gate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 283:33:@1589.4]
+  NV_CLK_gate_power_so wr_clk_rcv_gate ( // @[NV_NVDLA_CSB_MASTER_csb2falcon_fifo.scala 283:33:@1589.4]
     .io_clk(wr_clk_rcv_gate_io_clk),
     .io_clk_en(wr_clk_rcv_gate_io_clk_en),
     .io_clk_gated(wr_clk_rcv_gate_io_clk_gated)
