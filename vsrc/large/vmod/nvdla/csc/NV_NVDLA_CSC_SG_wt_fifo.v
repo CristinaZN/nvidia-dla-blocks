@@ -7,7 +7,7 @@
 // ================================================================
 // File Name: NV_NVDLA_CSC_SG_wt_fifo.v
 `define FORCE_CONTENTION_ASSERTION_RESET_ACTIVE 1'b1
-`include "simulate_x_tick.vh"
+include "simulate_x_tick.vh"
 module NV_NVDLA_CSC_SG_wt_fifo (
       clk
     , reset_

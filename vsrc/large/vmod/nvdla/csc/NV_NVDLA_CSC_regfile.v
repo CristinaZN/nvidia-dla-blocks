@@ -6,7 +6,7 @@
 // this distribution for more information.
 // ================================================================
 // File Name: NV_NVDLA_CSC_regfile.v
-`include "simulate_x_tick.vh"
+include "simulate_x_tick.vh"
 module NV_NVDLA_CSC_regfile (
    nvdla_core_clk //|< i
   ,nvdla_core_rstn //|< i
