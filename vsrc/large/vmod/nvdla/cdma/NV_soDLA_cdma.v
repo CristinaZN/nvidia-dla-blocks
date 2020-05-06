@@ -23657,7 +23657,7 @@ module NV_soDLA_HLS_shiftrightsu( // @[:@11204.2]
   assign _T_124 = tru_need_sat ? data_max : data_round; // @[NV_NVDLA_HLS_shiftrightsu.scala 45:81:@11288.4]
   assign io_data_out = _T_118 ? 17'h0 : _T_124; // @[NV_NVDLA_HLS_shiftrightsu.scala 45:17:@11290.4]
 endmodule
-module NV_NVDLA_HLS_saturate( // @[:@11292.2]
+module NV_soDLA_HLS_saturate( // @[:@11292.2]
   input  [16:0] io_data_in, // @[:@11295.4]
   output [15:0] io_data_out // @[:@11295.4]
 );
@@ -23685,7 +23685,7 @@ module NV_NVDLA_HLS_saturate( // @[:@11292.2]
   assign _T_41 = tru_need_sat ? {{1'd0}, data_max} : io_data_in; // @[NV_NVDLA_HLS_saturate.scala 24:23:@11320.4]
   assign io_data_out = _T_41[15:0]; // @[NV_NVDLA_HLS_saturate.scala 24:17:@11321.4]
 endmodule
-module NV_NVDLA_HLS_saturate_1( // @[:@11323.2]
+module NV_soDLA_HLS_saturate_1( // @[:@11323.2]
   input  [16:0] io_data_in, // @[:@11326.4]
   output [7:0]  io_data_out // @[:@11326.4]
 );
@@ -23859,16 +23859,16 @@ module NV_NVDLA_CDMA_CVT_cell( // @[:@11374.2]
     .io_ri(NV_NVDLA_BC_pipe_1_io_ri),
     .io_dout(NV_NVDLA_BC_pipe_1_io_dout)
   );
-  NV_soDLA_HLS_shiftrightsu NV_NVDLA_HLS_shiftrightsu ( // @[NV_NVDLA_CDMA_CVT_cell.scala 80:33:@11417.4]
+  NV_soDLA_HLS_shiftrightsu NV_soDLA_HLS_shiftrightsu ( // @[NV_NVDLA_CDMA_CVT_cell.scala 80:33:@11417.4]
     .io_data_in(NV_NVDLA_HLS_shiftrightsu_io_data_in),
     .io_shift_num(NV_NVDLA_HLS_shiftrightsu_io_shift_num),
     .io_data_out(NV_NVDLA_HLS_shiftrightsu_io_data_out)
   );
-  NV_NVDLA_HLS_saturate NV_NVDLA_HLS_saturate ( // @[NV_NVDLA_CDMA_CVT_cell.scala 85:34:@11422.4]
+  NV_soDLA_HLS_saturate NV_soDLA_HLS_saturate ( // @[NV_NVDLA_CDMA_CVT_cell.scala 85:34:@11422.4]
     .io_data_in(NV_NVDLA_HLS_saturate_io_data_in),
     .io_data_out(NV_NVDLA_HLS_saturate_io_data_out)
   );
-  NV_NVDLA_HLS_saturate_1 NV_NVDLA_HLS_saturate_1 ( // @[NV_NVDLA_CDMA_CVT_cell.scala 89:33:@11426.4]
+  NV_soDLA_HLS_saturate_1 NV_soDLA_HLS_saturate_1 ( // @[NV_NVDLA_CDMA_CVT_cell.scala 89:33:@11426.4]
     .io_data_in(NV_NVDLA_HLS_saturate_1_io_data_in),
     .io_data_out(NV_NVDLA_HLS_saturate_1_io_data_out)
   );
