@@ -3268,7 +3268,7 @@ module NV_NVDLA_IS_pipe( // @[:@1854.2]
     end
   end
 endmodule
-module NV_NVDLA_DMAIF_rdreq( // @[:@1948.2]
+module NV_soDLA_DMAIF_rdreq( // @[:@1948.2]
   input         reset, // @[:@1950.4]
   input         io_nvdla_core_clk, // @[:@1951.4]
   output        io_dmaif_rd_req_pd_ready, // @[:@1951.4]
@@ -7525,7 +7525,7 @@ module NV_NVDLA_CDMA_wt( // @[:@2604.2]
   reg [31:0] _RAND_66;
   wire [8:0] _T_700; // @[NV_NVDLA_CDMA_wt.scala 712:41:@3235.4 NV_NVDLA_CDMA_wt.scala 722:31:@3248.4]
   wire  _T_702; // @[NV_NVDLA_CDMA_wt.scala 713:48:@3236.4]
-  NV_NVDLA_DMAIF_rdreq NV_NVDLA_DMAIF_rdreq ( // @[NV_NVDLA_CDMA_wt.scala 299:41:@2828.4]
+  NV_soDLA_DMAIF_rdreq NV_soDLA_DMAIF_rdreq ( // @[NV_NVDLA_CDMA_wt.scala 299:41:@2828.4]
     .reset(NV_NVDLA_DMAIF_rdreq_reset),
     .io_nvdla_core_clk(NV_NVDLA_DMAIF_rdreq_io_nvdla_core_clk),
     .io_dmaif_rd_req_pd_ready(NV_NVDLA_DMAIF_rdreq_io_dmaif_rd_req_pd_ready),
@@ -9800,7 +9800,7 @@ module NV_NVDLA_CDMA_dc( // @[:@3869.2]
   wire  _T_1279; // @[NV_NVDLA_CDMA_dc.scala 1058:47:@5217.4]
   wire  _T_1280; // @[NV_NVDLA_CDMA_dc.scala 1058:22:@5218.4]
   wire  _T_1282; // @[NV_NVDLA_CDMA_dc.scala 1058:82:@5219.4]
-  NV_NVDLA_DMAIF_rdreq NV_NVDLA_DMAIF_rdreq ( // @[NV_NVDLA_CDMA_dc.scala 576:41:@4550.4]
+  NV_soDLA_DMAIF_rdreq NV_soDLA_DMAIF_rdreq ( // @[NV_NVDLA_CDMA_dc.scala 576:41:@4550.4]
     .reset(NV_NVDLA_DMAIF_rdreq_reset),
     .io_nvdla_core_clk(NV_NVDLA_DMAIF_rdreq_io_nvdla_core_clk),
     .io_dmaif_rd_req_pd_ready(NV_NVDLA_DMAIF_rdreq_io_dmaif_rd_req_pd_ready),
@@ -17618,7 +17618,7 @@ module NV_NVDLA_CDMA_IMG_sg( // @[:@7352.2]
   wire  _T_1291; // @[NV_NVDLA_CDMA_IMG_sg.scala 802:48:@8456.4]
   wire  _T_1292; // @[NV_NVDLA_CDMA_IMG_sg.scala 802:22:@8457.4]
   wire  _T_1294; // @[NV_NVDLA_CDMA_IMG_sg.scala 802:84:@8458.4]
-  NV_NVDLA_DMAIF_rdreq NV_NVDLA_DMAIF_rdreq ( // @[NV_NVDLA_CDMA_IMG_sg.scala 426:41:@7774.4]
+  NV_soDLA_DMAIF_rdreq NV_soDLA_DMAIF_rdreq ( // @[NV_NVDLA_CDMA_IMG_sg.scala 426:41:@7774.4]
     .reset(NV_NVDLA_DMAIF_rdreq_reset),
     .io_nvdla_core_clk(NV_NVDLA_DMAIF_rdreq_io_nvdla_core_clk),
     .io_dmaif_rd_req_pd_ready(NV_NVDLA_DMAIF_rdreq_io_dmaif_rd_req_pd_ready),
