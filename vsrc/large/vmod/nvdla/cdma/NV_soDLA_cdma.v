@@ -23584,7 +23584,7 @@ module NV_NVDLA_BC_pipe_1( // @[:@11184.2]
     end
   end
 endmodule
-module NV_NVDLA_HLS_shiftrightsu( // @[:@11204.2]
+module NV_soDLA_HLS_shiftrightsu( // @[:@11204.2]
   input  [33:0] io_data_in, // @[:@11207.4]
   input  [5:0]  io_shift_num, // @[:@11207.4]
   output [16:0] io_data_out // @[:@11207.4]
@@ -23859,7 +23859,7 @@ module NV_NVDLA_CDMA_CVT_cell( // @[:@11374.2]
     .io_ri(NV_NVDLA_BC_pipe_1_io_ri),
     .io_dout(NV_NVDLA_BC_pipe_1_io_dout)
   );
-  NV_NVDLA_HLS_shiftrightsu NV_NVDLA_HLS_shiftrightsu ( // @[NV_NVDLA_CDMA_CVT_cell.scala 80:33:@11417.4]
+  NV_soDLA_HLS_shiftrightsu NV_NVDLA_HLS_shiftrightsu ( // @[NV_NVDLA_CDMA_CVT_cell.scala 80:33:@11417.4]
     .io_data_in(NV_NVDLA_HLS_shiftrightsu_io_data_in),
     .io_shift_num(NV_NVDLA_HLS_shiftrightsu_io_shift_num),
     .io_data_out(NV_NVDLA_HLS_shiftrightsu_io_data_out)
