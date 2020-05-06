@@ -3470,7 +3470,7 @@ module NV_NVDLA_IS_pipe_2( // @[:@1982.2]
     end
   end
 endmodule
-module NV_NVDLA_DMAIF_rdrsp( // @[:@2123.2]
+module NV_soDLA_DMAIF_rdrsp( // @[:@2123.2]
   input          reset, // @[:@2125.4]
   input          io_nvdla_core_clk, // @[:@2126.4]
   output         io_mcif_rd_rsp_pd_ready, // @[:@2126.4]
@@ -7539,7 +7539,7 @@ module NV_NVDLA_CDMA_wt( // @[:@2604.2]
     .io_cvif_rd_req_pd_bits(NV_NVDLA_DMAIF_rdreq_io_cvif_rd_req_pd_bits),
     .io_reg2dp_src_ram_type(NV_NVDLA_DMAIF_rdreq_io_reg2dp_src_ram_type)
   );
-  NV_NVDLA_DMAIF_rdrsp NV_NVDLA_DMAIF_rdrsp ( // @[NV_NVDLA_CDMA_wt.scala 311:41:@2842.4]
+  NV_soDLA_DMAIF_rdrsp NV_soDLA_DMAIF_rdrsp ( // @[NV_NVDLA_CDMA_wt.scala 311:41:@2842.4]
     .reset(NV_NVDLA_DMAIF_rdrsp_reset),
     .io_nvdla_core_clk(NV_NVDLA_DMAIF_rdrsp_io_nvdla_core_clk),
     .io_mcif_rd_rsp_pd_ready(NV_NVDLA_DMAIF_rdrsp_io_mcif_rd_rsp_pd_ready),
@@ -9814,7 +9814,7 @@ module NV_NVDLA_CDMA_dc( // @[:@3869.2]
     .io_cvif_rd_req_pd_bits(NV_NVDLA_DMAIF_rdreq_io_cvif_rd_req_pd_bits),
     .io_reg2dp_src_ram_type(NV_NVDLA_DMAIF_rdreq_io_reg2dp_src_ram_type)
   );
-  NV_NVDLA_DMAIF_rdrsp NV_NVDLA_DMAIF_rdrsp ( // @[NV_NVDLA_CDMA_dc.scala 590:41:@4564.4]
+  NV_soDLA_DMAIF_rdrsp NV_soDLA_DMAIF_rdrsp ( // @[NV_NVDLA_CDMA_dc.scala 590:41:@4564.4]
     .reset(NV_NVDLA_DMAIF_rdrsp_reset),
     .io_nvdla_core_clk(NV_NVDLA_DMAIF_rdrsp_io_nvdla_core_clk),
     .io_mcif_rd_rsp_pd_ready(NV_NVDLA_DMAIF_rdrsp_io_mcif_rd_rsp_pd_ready),
@@ -17632,7 +17632,7 @@ module NV_NVDLA_CDMA_IMG_sg( // @[:@7352.2]
     .io_cvif_rd_req_pd_bits(NV_NVDLA_DMAIF_rdreq_io_cvif_rd_req_pd_bits),
     .io_reg2dp_src_ram_type(NV_NVDLA_DMAIF_rdreq_io_reg2dp_src_ram_type)
   );
-  NV_NVDLA_DMAIF_rdrsp NV_NVDLA_DMAIF_rdrsp ( // @[NV_NVDLA_CDMA_IMG_sg.scala 438:41:@7788.4]
+  NV_soDLA_DMAIF_rdrsp NV_soDLA_DMAIF_rdrsp ( // @[NV_NVDLA_CDMA_IMG_sg.scala 438:41:@7788.4]
     .reset(NV_NVDLA_DMAIF_rdrsp_reset),
     .io_nvdla_core_clk(NV_NVDLA_DMAIF_rdrsp_io_nvdla_core_clk),
     .io_mcif_rd_rsp_pd_ready(NV_NVDLA_DMAIF_rdrsp_io_mcif_rd_rsp_pd_ready),
