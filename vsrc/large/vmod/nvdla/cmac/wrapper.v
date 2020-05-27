@@ -357,7 +357,7 @@ module wrapper(
 	wire			io_nvdla_clock_dla_clk_ovr_on_sync;
 	wire			io_nvdla_clock_global_clk_ovr_on_sync;
 	wire			io_nvdla_clock_tmc2slcg_disable_clock_gating;
-//	wire			io_nvdla_core_rstn;
+	wire			io_nvdla_core_rstn;
 	wire			io_csb2cmac_a_req_ready;
 	wire			io_csb2cmac_a_req_valid;
 	wire	[62:0]	io_csb2cmac_a_req_bits;
