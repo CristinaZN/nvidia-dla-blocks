@@ -356,6 +356,7 @@ input [32/2 -1:0] sc2mac_wt_sel;
 output mac2accu_pvld; /* data valid */
 output [32/2 -1:0] mac2accu_mask;
 output mac2accu_mode;
+assign mac2accu_mode=0;
 //: for(my $i=0; $i<32/2; $i++){
 //: print qq(
 //: output [22 -1:0] mac2accu_data${i}; //|< i )
